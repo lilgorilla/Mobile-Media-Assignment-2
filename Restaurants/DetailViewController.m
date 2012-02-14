@@ -10,6 +10,10 @@
 @synthesize addressLabel;
 @synthesize navigationHeader;
 @synthesize cuisineLabel;
+@synthesize chefLabel;
+@synthesize reviewLabel;
+@synthesize phoneNumberLabel;
+@synthesize ageLabel;
 
 #pragma mark - View lifecycle
 
@@ -21,6 +25,11 @@
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
     cuisineLabel.text = [restaurant cuisineType];
+    chefLabel.text = [restaurant chefName];
+    reviewLabel.text = [restaurant review];
+    phoneNumberLabel.text = [restaurant phoneNumber ];
+    
+    //ageLabel.text = [restaurant age];
 
 }
 
@@ -29,6 +38,10 @@
     [self setAddressLabel:nil];
     [self setNavigationHeader:nil];
     [self setCuisineLabel:nil];
+    [self setChefLabel:nil];
+    [self setReviewLabel:nil];
+    [self setPhoneNumberLabel:nil];
+    [self setAgeLabel:nil];
     [super viewDidUnload];
 }
 

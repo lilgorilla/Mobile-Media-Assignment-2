@@ -15,5 +15,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationHeader;
 @property (weak, nonatomic) IBOutlet UILabel *cuisineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *chefLabel;
+@property (weak, nonatomic) IBOutlet UITextView *reviewLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 
 @end
