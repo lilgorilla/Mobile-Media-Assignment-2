@@ -6,13 +6,14 @@
 #import "Restaurant.h"
 
 @implementation Restaurant
-@synthesize address, name;
+@synthesize address, name, cuisineType;
 
 - (id)init {
     self = [super init];
     if (self) {
-        name = @"Congee Bowery";
+        name = @"No. 7";
         address = @"207 Bowery\nNew York, NY 10002";
+        cuisineType = @"experimental";
     }
     return self;
 }
