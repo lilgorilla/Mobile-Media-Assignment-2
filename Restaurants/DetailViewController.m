@@ -14,10 +14,6 @@
 @synthesize reviewLabel;
 @synthesize phoneNumberLabel;
 @synthesize ageLabel;
-@synthesize txtChef;
-@synthesize txtAddress;
-@synthesize txtCuisine;
-@synthesize txtReview;
 
 #pragma mark - View lifecycle
 
@@ -25,27 +21,20 @@
 {
     [super viewDidLoad];
     restaurant = [[Restaurant alloc] init];
+    
     navigationHeader.title = [restaurant name];
-
-    NSString*chef = @"Head Chef:";
-        //[NSString stringWithFormat:@"Head Chef: %i", restaurant.chefName];
-    txtChef.text = chef;
-    chefLabel.text = [NSString stringWithFormat:@"Head Chef:%i",[restaurant chefName]];
     
-    NSString*address = @"Address:";
-    txtAddress.text = address;
-    addressLabel.text = [restaurant address];
+    chefLabel.text = [NSString stringWithFormat:@"Head Chef: %@", [restaurant chefName]];
     
-    NSString*cuisine = @"Cuisine Tags:";
-    txtCuisine.text = cuisine;
-    cuisineLabel.text = [restaurant cuisineType];
+    addressLabel.text = [NSString stringWithFormat:@"Address:\n%@",[restaurant address]];
     
-    NSString*review = @"Review:";
-    txtReview.text = review;
-    reviewLabel.text = [restaurant review];
+    cuisineLabel.text = [NSString stringWithFormat:@"Cuisine Tags: %@", [restaurant cuisineType]];
     
-    phoneNumberLabel.text = [restaurant phoneNumber ];
-    ageLabel.text = [NSString stringWithFormat:@"%i (%i years ago)", restaurant.yearOpened, [restaurant age]];;
+    reviewLabel.text = [NSString stringWithFormat:@"Review:\n%@", [restaurant review]];
+    
+    phoneNumberLabel.text = [NSString stringWithFormat:@"Phone #: %@", [restaurant phoneNumber ]];
+    
+    ageLabel.text = [NSString stringWithFormat:@"Founded in: %i (%i years ago)", restaurant.yearOpened, [restaurant age]];;
 
 }
 
@@ -58,10 +47,6 @@
     [self setReviewLabel:nil];
     [self setPhoneNumberLabel:nil];
     [self setAgeLabel:nil];
-    [self setTxtChef:nil];
-    [self setTxtAddress:nil];
-    [self setTxtCuisine:nil];
-    [self setTxtReview:nil];
     [super viewDidUnload];
 }
 
