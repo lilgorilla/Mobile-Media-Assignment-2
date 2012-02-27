@@ -14,7 +14,7 @@
     NSString* phoneNumber;
     NSString* review;
     int currentYear;
-    int restaurantYear;
+    int yearOpened;
 }
 
 -(int)age;
@@ -27,7 +27,7 @@
 @property(readwrite,strong) NSString* phoneNumber;
 @property(readwrite,strong) NSString* review;
 @property(readwrite) int currentYear;
-@property(readwrite) int restaurantYear;
+@property(readwrite) int yearOpened;
 
 
 
